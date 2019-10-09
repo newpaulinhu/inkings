@@ -1,0 +1,54 @@
+<section id="content">
+  <div class="container">
+    <!-- end divider -->
+    <!-- Portfolio Projects -->
+    <div class="row">
+      <div class="span12">
+          <div class="text-center">
+              <h1 class="display-4"> Contato </h1>
+          </div>
+          <form (ngSubmit)="onSubmit()" #contatoForm="ngForm" [formGroup]="contato" class="form-horizontal">
+              <div class="row">
+                  <div class="control-group">
+                      <label for="nome" class="control-label">Nome</label>
+                      <div class="controls">
+                        <input  formControlName="nome"
+                              class="form-control span12"
+                              id="nome"
+                              name="Nome"
+                              placeholder="Nome"
+                              />
+                       </div>
+                  </div>
+                  <div class="control-group">
+                      <label for="email"  class="control-label">E-mail</label>
+                      <div class="controls">
+                        <input  formControlName="email"
+                              class="form-control span12"
+                              id="email"
+                              name="email"
+                              placeholder="E-mail" />
+                      </div>
+                  </div>
+
+                  <div class="control-group" >
+                    <label for="mensagem"  class="control-label">E-mail</label>
+                    <div class="controls">
+                      <textarea  formControlName="mensagem"
+                               class="form-control span12"
+                               id="mensagem"
+                               name="mensagem"
+                               rows="6"
+                              placeholder="Mensagem"></textarea>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="container text-center ">
+                      <button type="submit" class="btn btn-success btn-large" [disabled]="contato.invalid">Enviar</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+</section>
